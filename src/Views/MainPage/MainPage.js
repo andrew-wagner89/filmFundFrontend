@@ -34,7 +34,7 @@ export class MainPage extends React.Component {
             })
         } else if(length > 0){
             localStorage.setItem('idea', this.state.value)
-            this.context.router.push('/secondsubmission')
+            this.context.router.push('secondsubmission')
         } else {
             this.setState({
                 errorMessage: "Please input an idea"

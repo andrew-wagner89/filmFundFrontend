@@ -43,14 +43,14 @@ export class Container extends React.Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav pullRight>
-                            <NavItem eventKey={8} href="#/home">Home</NavItem>
-                            <NavItem eventKey={1} href="#/about">About</NavItem>
-                            <NavItem eventKey={2} href="#">Examples</NavItem>
-                            <NavItem eventKey={3} href="#">FAQ</NavItem>
-                            <NavItem eventKey={4} href="#">Contact Us</NavItem>
-                            <NavItem eventKey={5} href="#">Official Rules</NavItem>
-                            <NavItem eventKey={6} href="#">Terms of Service</NavItem>
-                            <NavItem eventKey={7} href="#">The Team</NavItem>
+                            <NavItem eventKey={8} href="#home">Home</NavItem>
+                            <NavItem eventKey={1} href="#about">About</NavItem>
+                            <NavItem eventKey={2} href="#examples">Examples</NavItem>
+                            <NavItem eventKey={3} href="#faq">FAQ</NavItem>
+                            <NavItem eventKey={4} href="#contact">Contact Us</NavItem>
+                            <NavItem eventKey={5} href="#rules">Official Rules</NavItem>
+                            <NavItem eventKey={6} href="#terms">Terms of Service</NavItem>
+                            <NavItem eventKey={7} href="#team">The Team</NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
