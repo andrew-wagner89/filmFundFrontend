@@ -1,0 +1,17 @@
+.logo {
+    height: 60px !important;
+    padding: 4px !important;
+}
+
+.title {
+    font-size: x-large;
+}
+
+.logo:hover, .title:hover {
+    cursor: pointer;
+}
+
+.clickable-panel:hover {
+    cursor: pointer;
+    background: #F5F5F5;
+}
