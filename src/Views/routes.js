@@ -13,6 +13,7 @@ import Contact from './Contact/Contact'
 import NotFound from './NotFound/NotFound'
 import Rules from './Rules/Rules'
 import Terms from './Terms/Terms'
+import Judges from './Judges/Judges'
 export const makeRoutes = () => {
     return (
         <Route path="/" component={Container}>
@@ -25,6 +26,7 @@ export const makeRoutes = () => {
             <Route path="contact" component={Contact} />
             <Route path="rules" component={Rules} />
             <Route path="terms" component={Terms} />
+            <Route path="team" component={Judges} />
             <Route path="*" component={NotFound} />
         </Route>
     )
