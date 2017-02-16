@@ -19,7 +19,7 @@ export class Rules extends React.Component {
                     <Row>
                         <Col>
                             <PanelGroup>
-                                <Panel header={<PageHeader>Official Rules</PageHeader>}>
+                                <Panel header={<PageHeader>Official Rules and Terms of Service</PageHeader>}>
 
                                     <ListGroup className="lg-left">
                                         <ListGroupItem>Rule 1: Lorem ipsum dolor sit amet, te sint dictas docendi mea, suas iudico et mei. Odio euripidis at eam, ad mea minim vitae possim.</ListGroupItem>

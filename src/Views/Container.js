@@ -2,8 +2,10 @@
  * Created by andrew on 2/4/17.
  */
 import React, { PropTypes as T } from 'react'
-import { Navbar, Nav, NavItem } from 'react-bootstrap'
+import {Navbar, Nav, NavItem } from 'react-bootstrap'
 import logo from '../Images/facebook_logo.png'
+import {StyleSheet, Image} from 'react-native'
+import background from '../Images/photo-1455472467710-3b204ed59394.jpg'
 import './Container.css'
 
 export class Container extends React.Component {
@@ -28,9 +30,17 @@ export class Container extends React.Component {
             children = React.cloneElement(this.props.children, {
             })
         }
+        const styles = StyleSheet.create({
+            backgroundImage: {
+                flex: -1,
+                width: '100%',
+                height: '100%',
+                resizeMode: 'stretch'
+            }
+        });
 
         return (
-            <div>
+            <Image source={background} style={styles.backgroundImage}>
                 <Navbar fluid>
                     <Navbar.Header>
                         <Navbar.Brand>
@@ -48,14 +58,14 @@ export class Container extends React.Component {
                             <NavItem eventKey={2} href="#examples">Examples</NavItem>
                             <NavItem eventKey={3} href="#faq">FAQ</NavItem>
                             <NavItem eventKey={4} href="#contact">Contact Us</NavItem>
-                            <NavItem eventKey={5} href="#rules">Official Rules</NavItem>
-                            <NavItem eventKey={6} href="#terms">Terms of Service</NavItem>
+                            <NavItem eventKey={5} href="#rulesterms">Official Rules and Terms</NavItem>
                             <NavItem eventKey={7} href="#team">The Team</NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
+
                 {children}
-            </div>
+            </Image>
         )
     }
 }

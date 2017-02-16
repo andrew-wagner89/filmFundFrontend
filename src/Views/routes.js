@@ -12,8 +12,8 @@ import FAQ from './FAQ/FAQ'
 import Contact from './Contact/Contact'
 import NotFound from './NotFound/NotFound'
 import Rules from './Rules/Rules'
-import Terms from './Terms/Terms'
 import Judges from './Judges/Judges'
+import PartTwoSubmit from './PartTwoSubmit/PartTwoSubmit'
 export const makeRoutes = () => {
     return (
         <Route path="/" component={Container}>
@@ -24,9 +24,9 @@ export const makeRoutes = () => {
             <Route path="examples" component={Examples} />
             <Route path="faq" component={FAQ} />
             <Route path="contact" component={Contact} />
-            <Route path="rules" component={Rules} />
-            <Route path="terms" component={Terms} />
+            <Route path="rulesterms" component={Rules} />
             <Route path="team" component={Judges} />
+            <Route path='part2submit' component={PartTwoSubmit} />
             <Route path="*" component={NotFound} />
         </Route>
     )

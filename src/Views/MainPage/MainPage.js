@@ -17,6 +17,10 @@ export class MainPage extends React.Component {
             value: "",
             errorMessage: ""
         }
+
+        localStorage.setItem('idea', "")
+        localStorage.setItem('name', "")
+        localStorage.setItem('email', "")
     }
     handleChange(e) {
         this.setState({ value: e.target.value })
@@ -48,14 +52,8 @@ export class MainPage extends React.Component {
                 <Grid>
                     <Row>
                         <Col>
-                            <PanelGroup>
-                                <Panel header={<PageHeader>Welcome to the Film Fund</PageHeader>}>
-                                    <PageHeader><small>Thanks for entering Round 1 to see what we’re all about. <br/>If you want a shot at the funding, choose to enter Round 2 now!</small></PageHeader>
-                                </Panel>
-                                <Panel>
-                                    <PageHeader><small>Info about the film fund here Lorem ipsum dolor sit amet, te sint dictas docendi mea, suas iudico et mei. Odio euripidis at eam, ad mea minim vitae possim. Mei modo vocibus ea. Quo eu summo legere. Vix at solet interesset, no deserunt iracundia scripserit per. Sit eu nominavi molestie convenire. Ad eam veritus referrentur, deleniti gloriatur definiebas et pro.</small></PageHeader>
-                                </Panel>
-                                <Panel header={<p>Enter round 1 here! </p>}>
+                            <PanelGroup >
+                                <Panel className="panel-transparent" header={<PageHeader className="panel-transparent">Welcome to the Film Fund</PageHeader>}>
                                     <FormGroup
                                         controlId="formBasicText"
                                         validationState={this.getValidationState()}
@@ -73,7 +71,12 @@ export class MainPage extends React.Component {
                                         Submit your idea
                                     </Button>
                                     <p>{this.state.errorMessage}</p>
+                                    <PageHeader><small>Thanks for entering Round 1 to see what we’re all about. <br/>If you want a shot at the funding, choose to enter Round 2 now!</small></PageHeader>
                                 </Panel>
+                                <Panel>
+                                    <PageHeader><small>Info about the film fund here Lorem ipsum dolor sit amet, te sint dictas docendi mea, suas iudico et mei. Odio euripidis at eam, ad mea minim vitae possim. Mei modo vocibus ea. Quo eu summo legere. Vix at solet interesset, no deserunt iracundia scripserit per. Sit eu nominavi molestie convenire. Ad eam veritus referrentur, deleniti gloriatur definiebas et pro.</small></PageHeader>
+                                </Panel>
+
                             </PanelGroup>
                         </Col>
                     </Row>
