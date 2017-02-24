@@ -1,3 +1,14 @@
 .root {
       text-align: center;
 }
+
+.feat-logo {
+      width: 100% !important;
+}
+
+.centered {
+      margin: auto !important;
+}
+.green {
+      color: rgb(69, 160, 73);
+}

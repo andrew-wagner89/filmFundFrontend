@@ -1,0 +1,4 @@
+div.SocialMediaShareButton.SocialMediaShareButton--facebook.centered-share, div.SocialMediaShareButton.SocialMediaShareButton--twitter.centered-share {
+    margin: auto !important;
+    width: 40px !important;
+}

@@ -21,8 +21,10 @@ export class Contact extends React.Component {
                     <Row>
                         <Col>
                             <PanelGroup>
-                                <Panel header={<PageHeader>Contact Information</PageHeader>}>
-                                    <PageHeader><small>Put contact info here</small></PageHeader>
+                                <Panel className="black" header={<PageHeader>Contact Information</PageHeader>}>
+                                    <PageHeader><small>
+                                        Hit us up at tom@thefilmfund.co with any questions whatsoever, <br/>Even if you just want to ask me what I'm having for lunch.
+                                    </small></PageHeader>
                                 </Panel>
                             </PanelGroup>
                         </Col>

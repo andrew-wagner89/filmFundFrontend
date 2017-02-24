@@ -1,10 +1,14 @@
 .logo {
     height: 60px !important;
-    padding: 4px !important;
+    padding: 10px !important;
 }
 
 .title {
     font-size: x-large;
+}
+
+html {
+    height: auto;
 }
 
 .logo:hover, .title:hover {
@@ -16,6 +20,37 @@
     background: #F5F5F5;
 }
 
-.maincontain {
-    height:100% !important;
+
+
+html {
+    min-height: 100% !important;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9) ), url('../Images/photo-1455472467710-3b204ed59394.jpg');
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+
+.black, div.panel-default > .panel-heading, h1 small, div.panel-body, navbar-default, .panel, .maincontain, body{
+    background-color: transparent !important;
+    background-image: none !important;
+    color: white !important;
+    border-color: transparent !important;
+}
+.navbar-text, .navbar-default .navbar-nav > li > a {
+    color: white !important;
+}
+
+.list-group-item {
+    background-color: transparent !important;
+    color: white !important;
+    border-color: rgb(69, 160, 73) !important;
+}
+
+.page-header{
+    border-bottom: 1px solid rgb(69, 160, 73) !important;
+}
+
+
+.grnborder {
+    border-color: rgb(69, 160, 73) !important;
 }

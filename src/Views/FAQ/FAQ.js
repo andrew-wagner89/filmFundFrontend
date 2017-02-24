@@ -16,16 +16,22 @@ export class FAQ extends React.Component {
     render() {
 
         return (
-            <div className="root">
+            <div className="root" fluid>
                 <Grid>
                     <Row>
                         <Col>
                             <PanelGroup>
                                 <Panel header={<PageHeader>Frequently Asked Questions</PageHeader>}>
-                                    <ListGroup className="lg-left">
-                                        <ListGroupItem header="Why male models?">Lorem ipsum dolor sit amet, te sint dictas docendi mea, suas iudico et mei. Odio euripidis at eam, ad mea minim vitae possim.</ListGroupItem>
-                                        <ListGroupItem header="Can i have the money now?"> Lorem ipsum dolor sit amet, te sint dictas docendi mea, suas iudico et mei. Odio euripidis at eam, ad mea minim vitae possim.</ListGroupItem>
-                                        <ListGroupItem header="What if i say please how bout dat?">Lorem ipsum dolor sit amet, te sint dictas docendi mea, suas iudico et mei. Odio euripidis at eam, ad mea minim vitae possim.</ListGroupItem>
+                                    <ListGroup className="lg-left black" >
+                                        <ListGroupItem header="Do I keep the rights to the my short film if I win?">Yes, you retain all rights.</ListGroupItem>
+                                        <ListGroupItem header="How do I receive the funding?">To maintain accountability, The Film Fund will reimburse individual expenses for your film after receiving expense reports, receipts, invoices, etc.</ListGroupItem>
+                                        <ListGroupItem header="Where does the money come from?">Filmmakers like you who have also submitted their sentence to The Film Fund.</ListGroupItem>
+                                        <ListGroupItem header="Why are you doing this?">We want to see films get financed in a new way because we know it's possible to get around industry gatekeepers.</ListGroupItem>
+                                        <ListGroupItem header="What kind of genres are you looking for?">Anything that has the potential to carry a good story. Horror, comedy, drama, anything. Absolutely no adult films under any circumstance.</ListGroupItem>
+                                        <ListGroupItem header="Who are the judges?">Check them out <a href="#team">here</a> </ListGroupItem>
+                                        <ListGroupItem header="Can I submit the finished film to film festivals?">Of course.</ListGroupItem>
+                                        <ListGroupItem header="I have no idea what I'm doing. Will you help me with budgeting?">Budgets will be different for each film, but we'd be more than happy to share some sample short film budgets with you upon request. They're pretty easy to put together.</ListGroupItem>
+                                        <ListGroupItem header="Do I need to give credit to The Film Fund?">Yes, and we'll be honored. Include visible text in your film for at least 5 seconds (either in opening or end credits) that reads "Made Possible by The Film Fund."</ListGroupItem>
                                     </ListGroup>
                                     <p>Question not answered here? Please contact us!</p>
                                 </Panel>

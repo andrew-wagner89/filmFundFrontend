@@ -2,7 +2,9 @@
  * Created by andrew on 2/4/17.
  */
 import React, { PropTypes as T } from 'react'
-import {PageHeader, Panel, PanelGroup, Col, Row, Grid, FormGroup, HelpBlock,FormControl, Button} from 'react-bootstrap'
+import {PageHeader, Panel, PanelGroup, FormGroup, HelpBlock,FormControl, Button, Image} from 'react-bootstrap'
+import logobig from '../../Images/logobig.png'
+
 import './MainPage.css'
 
 export class MainPage extends React.Component {
@@ -49,38 +51,36 @@ export class MainPage extends React.Component {
 
         return (
             <div className="root">
-                <Grid>
-                    <Row>
-                        <Col>
-                            <PanelGroup >
-                                <Panel className="panel-transparent" header={<PageHeader className="panel-transparent">Welcome to the Film Fund</PageHeader>}>
-                                    <FormGroup
-                                        controlId="formBasicText"
-                                        validationState={this.getValidationState()}
-                                    >
-                                        <FormControl
-                                            type="textarea"
-                                            value={this.state.value}
-                                            placeholder="Enter your idea here"
-                                            onChange={this.handleChange.bind(this)}
-                                        />
-                                        <FormControl.Feedback />
-                                        <HelpBlock>{'Current Entry length: ' + this.state.value.length + ' characters. Max allowed length: 200'}</HelpBlock>
-                                    </FormGroup>
-                                    <Button bsStyle="primary" onClick={this.submitIdea.bind(this)}>
-                                        Submit your idea
-                                    </Button>
-                                    <p>{this.state.errorMessage}</p>
-                                    <PageHeader><small>Thanks for entering Round 1 to see what we’re all about. <br/>If you want a shot at the funding, choose to enter Round 2 now!</small></PageHeader>
-                                </Panel>
-                                <Panel>
-                                    <PageHeader><small>Info about the film fund here Lorem ipsum dolor sit amet, te sint dictas docendi mea, suas iudico et mei. Odio euripidis at eam, ad mea minim vitae possim. Mei modo vocibus ea. Quo eu summo legere. Vix at solet interesset, no deserunt iracundia scripserit per. Sit eu nominavi molestie convenire. Ad eam veritus referrentur, deleniti gloriatur definiebas et pro.</small></PageHeader>
-                                </Panel>
+                <PanelGroup >
+                    <Image className="centered" src={logobig}/>
+                    <Panel className="black" header={<PageHeader>Get up to $10,000 to make your short film by writing one sentence.</PageHeader>}>
+                        <h1 className="black"><small>
+                            <h1> Why The Film Fund?</h1><br/>
+                            We're funding up to $10,000 in a way that's a lot simpler than screenwriting contests, crowdfunding, or applying to grants, because I'm sick of seeing these contests dominated by industry experts (i.e. Zach Braff raising 3+ million on Kickstarter).<br/><br/>
+                            Because of that, our funding process is designed to level the funding field and not give advantages to anyone. You simply <a href="#examples">write one sentence</a> conveying your short film concept, and a panel of judges will pick the best sentence. Sentences will be judged on two factors: 1) a compelling premise and 2) creative utilization of funds<br/><br/>
+                            Enter a sample sentence to Round 1 now to see how simple the process really is.
+                        </small></h1>
+                        <FormGroup
+                            controlId="formBasicText"
+                            validationState={this.getValidationState()}
+                        >
+                            <FormControl
+                                type="textarea"
+                                value={this.state.value}
+                                placeholder="Enter your idea here"
+                                onChange={this.handleChange.bind(this)}
+                            />
+                            <FormControl.Feedback />
+                            <HelpBlock>{'Current Entry length: ' + this.state.value.length + ' characters. Max allowed length: 200'}</HelpBlock>
+                        </FormGroup>
+                        <Button bsStyle="primary" onClick={this.submitIdea.bind(this)}>
+                            Submit your idea
+                        </Button>
+                        <p>{this.state.errorMessage}</p>
 
-                            </PanelGroup>
-                        </Col>
-                    </Row>
-                </Grid>
+                    </Panel>
+
+                </PanelGroup>
             </div>
         )
     }

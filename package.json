@@ -8,7 +8,10 @@
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-social": "^1.7.1"
+    "react-share": "^1.11.1",
+    "react-social": "^1.7.1",
+    "react-social-buttons": "^1.0.8",
+    "react-social-share": "0.0.6"
   },
   "scripts": {
     "start": "react-scripts start",

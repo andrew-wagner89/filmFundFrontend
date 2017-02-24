@@ -18,11 +18,12 @@ export class About extends React.Component {
                     <Row>
                         <Col>
                             <PanelGroup>
-                                <Panel header={<PageHeader>About the Film Fund</PageHeader>}>
-                                    <PageHeader><small>Info about the film fund here Lorem ipsum dolor sit amet, te sint dictas docendi mea, suas iudico et mei. Odio euripidis at eam, ad mea minim vitae possim. Mei modo vocibus ea. Quo eu summo legere. Vix at solet interesset, no deserunt iracundia scripserit per. Sit eu nominavi molestie convenire. Ad eam veritus referrentur, deleniti gloriatur definiebas et pro.</small></PageHeader>
-                                </Panel>
-                                <Panel>
-                                    <PageHeader><small>Info about the film fund here Lorem ipsum dolor sit amet, te sint dictas docendi mea, suas iudico et mei. Odio euripidis at eam, ad mea minim vitae possim. Mei modo vocibus ea. Quo eu summo legere. Vix at solet interesset, no deserunt iracundia scripserit per. Sit eu nominavi molestie convenire. Ad eam veritus referrentur, deleniti gloriatur definiebas et pro.</small></PageHeader>
+                                <Panel className="black" header={<PageHeader>About the Film Fund</PageHeader>}>
+                                    <PageHeader><small>
+                                        The Film Fund is an alternative to film industry funding platforms such as screenwriting, time-intensive grant applications, and crowdfunding campaigns via websites such as such as Kickstarter, Indiegogo, or Seed & Spark. We want to level the funding field and take the skewed advantages out of independent film.
+                                        <br/>
+                                        See our FAQ <a href="#faq">here</a>
+                                    </small></PageHeader>
                                 </Panel>
                             </PanelGroup>
                         </Col>

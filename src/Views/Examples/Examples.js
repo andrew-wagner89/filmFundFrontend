@@ -18,12 +18,24 @@ export class Examples extends React.Component {
                     <Row>
                         <Col>
                             <PanelGroup>
-                                <Panel header={<PageHeader>Examples</PageHeader>}>
-                                    <p>some info about what you're looking for?</p>
+                                <Panel className="black"header={<PageHeader>Examples</PageHeader>}>
+                                    <h1><small>
+                                        Sentences will be judged on the following two factors:
+                                        <br/>
+                                        1) a compelling premise<br/>
+                                        2) creative utilization of funds
+                                    </small></h1>
+                                    <br/><br/>
                                     <ListGroup className="lg-left">
-                                        <ListGroupItem>Example 1: Lorem ipsum dolor sit amet, te sint dictas docendi mea, suas iudico et mei. Odio euripidis at eam, ad mea minim vitae possim.</ListGroupItem>
-                                        <ListGroupItem>Example 2: Lorem ipsum dolor sit amet, te sint dictas docendi mea, suas iudico et mei. Odio euripidis at eam, ad mea minim vitae possim.</ListGroupItem>
-                                        <ListGroupItem>Example 3: Lorem ipsum dolor sit amet, te sint dictas docendi mea, suas iudico et mei. Odio euripidis at eam, ad mea minim vitae possim.</ListGroupItem>
+                                        <ListGroupItem>
+                                            <h4>A woman is haunted by a misunderstood psychological condition where she struggles to find joy in even the happiest of situations, and I need the funding largely for special effects and a helicopter.</h4>
+                                        </ListGroupItem>
+                                    </ListGroup>
+                                    <br/>
+                                    <ListGroup>
+                                        <ListGroupItem>
+                                            <h4>When killer crabs attack a small-town hotdog bun factory, only one man can stop all hell from breaking loose, and most of our funding will go to professional crab-wranglers.</h4>
+                                        </ListGroupItem>
                                     </ListGroup>
                                 </Panel>
                             </PanelGroup>

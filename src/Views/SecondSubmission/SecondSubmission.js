@@ -2,9 +2,10 @@
  * Created by andrew on 2/5/17.
  */
 import React, { PropTypes as T } from 'react'
-import {PageHeader, Panel, PanelGroup, Col, Row, Grid, FormGroup, HelpBlock,FormControl} from 'react-bootstrap'
+import {PageHeader, Panel, PanelGroup, Col, Row, Grid, FormGroup, HelpBlock,FormControl, Button} from 'react-bootstrap'
 import StripeCheckout from 'react-stripe-checkout'
 import logo from '../../Images/facebook_logo.png'
+import stripeLogo from '../../Images/powered_by_stripe.png'
 import './SecondSubmission.css'
 
 export class SecondSubmission extends React.Component {
@@ -59,9 +60,6 @@ export class SecondSubmission extends React.Component {
         dataToSend.append('Idea', this.state.value)
         dataToSend.append('Submitter', this.state.name)
         dataToSend.append('Token', JSON.stringify(token))
-        for (var pair of dataToSend.entries()) {
-            console.log(pair[0]+ ', ' + pair[1]);
-        }
         fetch('https://script.google.com/macros/s/AKfycbz9fDIv7bhBWb8nTWrkg4-cKjIQ3oG9t0BgbLGnZQOorxR52UOd/exec',
             {
                 method: 'POST',
@@ -71,7 +69,6 @@ export class SecondSubmission extends React.Component {
             if (res.ok)
         {
             res.json().then(res1 => {
-                console.log('sent data to sheet')
                 localStorage.setItem('idea', this.state.value)
                 localStorage.setItem('name', this.state.name)
                 localStorage.setItem('email', this.state.email)
@@ -89,14 +86,15 @@ export class SecondSubmission extends React.Component {
             <div className="root">
                 <Grid>
                     <Row>
-                        <Col>
                             <PanelGroup>
                                 <Panel header={<PageHeader>Welcome to the Film Fund</PageHeader>}>
-                                    <PageHeader><small>Thanks for submitting your idea! <br/>If you want a shot at the funding, pay up!</small></PageHeader>
+                                    <PageHeader><small>Wasn't that easy? Enter your sentence below to Round 2 for a chance to get up to $10,000 in funding to make your short film idea into a real production
+                                        <br/><br/>
+                                        Contest entry fee: $25
+                                    </small></PageHeader>
                                 </Panel>
-                                <Panel header={<p>Enter round 2 here! </p>}>
+                                <Panel header={<p>Enter Round 2 here! </p>}>
                                     <p>Your Idea</p>
-            <form id='submitter'>
                                     <FormGroup
                                         controlId="Idea"
                                         validationState={this.getValidationStateIdea()}
@@ -111,6 +109,7 @@ export class SecondSubmission extends React.Component {
                                         <HelpBlock>{'Current Entry length: ' + this.state.value.length + ' characters. Max allowed length: 200'}</HelpBlock>
                                     </FormGroup>
                                     <p>Your Name</p>
+                <Col xs={12} sm={4} smOffset={4}>
                                     <FormGroup
                                         controlId="Submitter"
                                         validationState={this.getValidationStateName()}
@@ -136,15 +135,15 @@ export class SecondSubmission extends React.Component {
                                         />
                                         <FormControl.Feedback />
                                     </FormGroup>
-            </form>
-                                    <p>Credit Card payment is verified and secured by Stripe</p>
+
+
                                     <StripeCheckout
                                         name="The Film Fund"
-                                        description="Pay $20 for the chance to win "
+                                        description="Pay $25 for the chance to win"
                                         image={logo}
                                         ComponentClass="div"
-                                        panelLabel="Pay"
-                                        amount={2000}
+                                        panelLabel="Pay with Credit Card"
+                                        amount={2500}
                                         currency="USD"
                                         stripeKey="pk_test_o6Bwq8xknOQT69Kl7toA7v2H"
                                         email={this.state.email}
@@ -154,12 +153,16 @@ export class SecondSubmission extends React.Component {
                                         // cause zipCheck to be pulled from billing address (set to shipping if none provided).
                                         zipCode={false}
                                         token={this.submitIdea.bind(this)}>
-                                        </StripeCheckout>
+                                        <Button className="btn btn-primary">
+                                            Pay with Credit Card
+                                        </Button>
+                                        </StripeCheckout><br/>
+                    <img src={stripeLogo}/>
 
                                     <p>{this.state.errorMessage}</p>
+                                </Col>
                                 </Panel>
                             </PanelGroup>
-                        </Col>
                     </Row>
                 </Grid>
             </div>

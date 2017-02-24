@@ -3,7 +3,7 @@
  */
 import React, { PropTypes as T } from 'react'
 import {PageHeader, Panel, PanelGroup, Col, Row, Grid, FormGroup, HelpBlock,FormControl, Button} from 'react-bootstrap'
-import {FacebookButton, FacebookCount, TwitterButton, TwitterCount } from 'react-social'
+import {generateShareIcon, ShareButtons} from 'react-share';
 import './PartTwoSubmit.css'
 
 export class PartTwoSubmit extends React.Component {
@@ -18,7 +18,7 @@ export class PartTwoSubmit extends React.Component {
             value: '',
             name: localStorage.getItem('name'),
             email: localStorage.getItem('email'),
-            freeSubmits: 1,
+            freeSubmits: 0,
             twitterSubmit: 0,
             facebookSubmit: 0,
             errorMessage: ""
@@ -54,24 +54,32 @@ export class PartTwoSubmit extends React.Component {
         if (length === 0) return 'error'
         else return 'success'
     }
-    twitterShared(count){
-        if(count > 0 && this.state.twitterSubmit == 0){
-            this.setState({
-                freeSubmits: this.state.freeSubmits+1,
-                twitterSubmit: 1
-            })
-        }
+    twitterShared(){
+        return new Promise((resolve, reject) => {
+            if (this.state.twitterSubmit === 0) {
+                this.setState({
+                    freeSubmits: this.state.freeSubmits + 1,
+                    twitterSubmit: 1
+                })
+            }
+            resolve()
+        })
     }
-    facebookShared(count){
-        if(count > 0 && this.state.facebookSubmit == 0){
-            this.setState({
-                freeSubmits: this.state.freeSubmits+1,
-                facebookSubmit: 1
-            })
-        }
+    facebookShared(){
+        return new Promise((resolve, reject) => {
+            if(this.state.facebookSubmit === 0){
+                this.setState({
+                    freeSubmits: this.state.freeSubmits+1,
+                    facebookSubmit: 1
+                })
+            }
+            resolve()
+        })
     }
     submitAgain(){
-
+        this.setState({
+            errorMessage: 'Submitting...'
+        })
         const dataToSend = new FormData();
         dataToSend.append('Email', this.state.email)
         dataToSend.append('Idea', this.state.value)
@@ -85,10 +93,12 @@ export class PartTwoSubmit extends React.Component {
             if (res.ok)
         {
             res.json().then(res1 => {
-                console.log('sent data to sheet')
-            localStorage.setItem('idea', this.state.value)
-            localStorage.setItem('name', this.state.name)
-            localStorage.setItem('email', this.state.email)
+                this.setState({
+                    value: '',
+                    freeSubmits: this.state.freeSubmits - 1,
+                    errorMessage: 'Submitted Successfully!'
+                })
+
         })
 
         } else {
@@ -98,24 +108,43 @@ export class PartTwoSubmit extends React.Component {
     }
     render() {
 
+
+        const FacebookIcon = generateShareIcon('facebook')
+        const TwitterIcon = generateShareIcon('twitter')
+        const {
+            FacebookShareButton,
+            TwitterShareButton
+        } = ShareButtons
+
         return (
             <div className="root">
             <Grid>
             <Row>
             <Col>
             <PanelGroup>
-            <Panel header={<PageHeader>Welcome to the Film Fund</PageHeader>}>
-    <PageHeader><small>Thanks for entering the competition! <br/>If you want to submit again for free share our competition over social media <br/> One share is worth one more submission</small></PageHeader>
+            <Panel header={<PageHeader>Thanks for entering the competition! </PageHeader>}>
+    <PageHeader><small>If you want to submit again for free share our competition over social media <br/> One share is worth one more submission</small></PageHeader>
         </Panel>
-        <Panel header={<p>Enter round 2 here! </p>}>
-            <FacebookButton url="thefilmfund.co" title="The Film Fund" message="Check out our film competition" element={Button}>
-                <FacebookCount url="thefilmfund.co" onCount={this.facebookShared.bind(this)}/>
-                Share us Facebook!
-            </FacebookButton>
-            <TwitterButton url="thefilmfund.co" title="The Film Fund" message="Check out our film competition" element={Button}>
-                <TwitterCount url="thefilmfund.co" onCount={this.twitterShared.bind(this)}/>
-                Share us Twitter!
-            </TwitterButton>
+        <Panel header={<p>Share our page here! </p>}>
+            <FacebookShareButton
+                url={"http://thefilmfund.co/"}
+                title={"The Film Fund"}
+                className="centered-share"
+                beforeOnClick={this.facebookShared.bind(this)}>
+                <FacebookIcon
+                    size={40}
+                    round />
+            </FacebookShareButton>
+            <TwitterShareButton
+                url={"http://thefilmfund.co/"}
+                title={"The Film Fund"}
+                className="centered-share"
+                beforeOnClick={this.twitterShared.bind(this)}>
+                <TwitterIcon
+                    size={40}
+                    round />
+            </TwitterShareButton>
+    <br/>
     <p>Your Idea</p>
         <FormGroup
             controlId="Idea"
@@ -124,7 +153,7 @@ export class PartTwoSubmit extends React.Component {
             <FormControl
                 type="textarea"
                 value={this.state.value}
-                placeholder="Enter your idea here"
+                placeholder="Enter your new idea here"
                 onChange={this.handleChangeIdea.bind(this)}
             />
             <FormControl.Feedback />
@@ -156,9 +185,10 @@ export class PartTwoSubmit extends React.Component {
             />
             <FormControl.Feedback />
         </FormGroup>
+            <p>{this.state.errorMessage}</p>
             <Button onClick={this.submitAgain.bind(this)} disabled={this.state.freeSubmits > 0 ? false: true}> Click Here to Submit again <br/> You have {this.state.freeSubmits} free submissions left!</Button><br/><br/>
             <Button onClick={() => {this.context.router.push('home')}}>Return to the Home Screen</Button>
-        <p>{this.state.errorMessage}</p>
+
         </Panel>
         </PanelGroup>
         </Col>
