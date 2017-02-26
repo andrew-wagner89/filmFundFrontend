@@ -29,7 +29,7 @@ export class Judges extends React.Component {
                                                 <Panel className="grnborder">
                                                     <img src={avi} alt="" className="judge-img"></img>
                                                     <h3>Avi Setton</h3>
-                                                    <p>Avi Setton received a B.F.A. in Film & Television Production at New York University’s Tisch School of the Arts with a minor in Philosophy, and an M.A. in English at Lehigh University. Avi's experience is wide-ranging: he taught documentary filmmaking to graduate students at Lehigh, taught screenwriting at SOCAPA, worked as a story logger on a reality TV show, worked as an editor, script supervisor, and assistant cameraman on films, TV shows, and commercials, among other freelance industry jobs. Avi currently works as a Mixed Reality videographer for Adecco, Google.</p>
+                                                    <p>Avi Setton received a B.F.A. in Film & Television Production at New York University’s Tisch School of the Arts with a minor in Philosophy, and an M.A. in English at Lehigh University. Avi's experience is wide-ranging: he taught documentary filmmaking to graduate students at Lehigh, taught screenwriting at SOCAPA, worked as a story logger on a reality TV show, worked as an editor, script supervisor, and assistant cameraman on films, TV shows, and commercials, among other freelance industry jobs. Avi currently works in Mixed Reality and Virtual Reality.</p>
                                                 </Panel>
                                             </Col>
                                             <Col xs={12} sm={6} lg={3}>

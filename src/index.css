@@ -1,3 +1,15 @@
+
+@font-face {
+  font-family: FiraSans-SemiBold;
+  src: url('./Fonts/FiraSans-SemiBold.woff') format('woff'), url('./Fonts/FiraSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: FiraSans-Heavy;
+  src: url('./Fonts/FiraSans-Heavy.woff') format('woff'), url('./Fonts/FiraSans-Heavy.ttf') format('truetype');
+}
+
+
 body {
-  font-family: sans-serif;
+  font-family: FiraSans-SemiBold;
 }

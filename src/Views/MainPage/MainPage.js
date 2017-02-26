@@ -2,7 +2,7 @@
  * Created by andrew on 2/4/17.
  */
 import React, { PropTypes as T } from 'react'
-import {PageHeader, Panel, PanelGroup, FormGroup, HelpBlock,FormControl, Button, Image} from 'react-bootstrap'
+import {PageHeader, Panel, PanelGroup, FormGroup, HelpBlock,FormControl, Button, Image, Grid, Col, Row} from 'react-bootstrap'
 import logobig from '../../Images/logobig.png'
 
 import './MainPage.css'
@@ -51,15 +51,25 @@ export class MainPage extends React.Component {
 
         return (
             <div className="root">
+                <Grid>
+                    <Row>
                 <PanelGroup >
                     <Image className="centered" src={logobig}/>
                     <Panel className="black" header={<PageHeader>Get up to $10,000 to make your short film by writing one sentence.</PageHeader>}>
+                        <Col xs={12} md={10} mdOffset={1}>
                         <h1 className="black"><small>
-                            <h1> Why The Film Fund?</h1><br/>
-                            We're funding up to $10,000 in a way that's a lot simpler than screenwriting contests, crowdfunding, or applying to grants, because I'm sick of seeing these contests dominated by industry experts (i.e. Zach Braff raising 3+ million on Kickstarter).<br/><br/>
-                            Because of that, our funding process is designed to level the funding field and not give advantages to anyone. You simply <a href="#examples">write one sentence</a> conveying your short film concept, and a panel of judges will pick the best sentence. Sentences will be judged on two factors: 1) a compelling premise and 2) creative utilization of funds<br/><br/>
-                            Enter a sample sentence to Round 1 now to see how simple the process really is.
+                            <h1 className="question"> Why The Film Fund?</h1><br/>
+                            Starting out as an independent filmmaker, I found myself struggling to raise financing and find resources for my film projects. It appeared that those who already had industry experience or access to better resources and crew dominated most contests.<br/><br/>
+                            We're providing funding up to $10,000 for a short film in a way that's a lot simpler than screenwriting contests, crowdfunding, or applying to grants, because I'm sick of seeing these funding avenues dominated by industry experts (i.e. Zach Braff raising 3+ million on Kickstarter).<br/><br/>
+                            – Thomas Verdi, Founder and CEO
                         </small></h1>
+                        <br/><br/>
+                        <h1 className="question">How Do I Enter?</h1>
+                        <h1><small>Craft and submit one sentence with a compelling premise that also conveys why you need this funding to achieve your vision. Our judges will pick the best one. To see how easy it is, the first round is free to enter. Then you and your brilliant sentence can choose to pay $25 to enter the second round for a chance to win up to $10,000. See examples here, and enter below.<br/><br/>
+                            Sentences judged on:<br/>
+                            1) Compelling Premise<br/>
+                            2) Creative Utilization of Funds</small></h1><br/>
+                        </Col>
                         <FormGroup
                             controlId="formBasicText"
                             validationState={this.getValidationState()}
@@ -81,6 +91,8 @@ export class MainPage extends React.Component {
                     </Panel>
 
                 </PanelGroup>
+                    </Row>
+                </Grid>
             </div>
         )
     }
