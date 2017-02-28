@@ -57,7 +57,7 @@ export class SecondSubmission extends React.Component {
         const webTaskData = new FormData()
         webTaskData.append('stripeToken', token.id)
         console.log(JSON.stringify(token.id))
-        fetch('https://wt-5ff77dc3c93e8fcd7c00c61fe5c491f2-0.run.webtask.io/stripecharge?stripeToken=' + token.id,{
+        fetch('https://wt-5ff77dc3c93e8fcd7c00c61fe5c491f2-0.run.webtask.io/stripecharge?stripeToken=' + token.id + '&email=' + this.state.email,{
             method: 'GET',
         }).then(res => {
             if (res.ok) {
@@ -165,7 +165,7 @@ export class SecondSubmission extends React.Component {
                                         panelLabel="Pay with Credit Card"
                                         amount={2500}
                                         currency="USD"
-                                        stripeKey="pk_live_XkhEgLXdc6Vruep49wl4Hw8M"
+                                        stripeKey="pk_test_OVYyuROmFO9qezacgAn0OX6s"
                                         email={this.state.email}
                                         billingAddress
                                         allowRememberMe={false}
