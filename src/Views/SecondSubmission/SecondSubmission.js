@@ -54,31 +54,49 @@ export class SecondSubmission extends React.Component {
         else return 'success'
     }
     submitIdea(token){
+        const webTaskData = new FormData()
+        webTaskData.append('stripeToken', token.id)
+        console.log(JSON.stringify(token.id))
+        fetch('https://wt-5ff77dc3c93e8fcd7c00c61fe5c491f2-0.run.webtask.io/stripecharge?stripeToken=' + token.id,{
+            method: 'GET',
+        }).then(res => {
+            if (res.ok) {
+                res.text().then(text => {
+                    console.log(text)
+                    const dataToSend = new FormData();
+                    dataToSend.append('Email', this.state.email)
+                    dataToSend.append('Idea', this.state.value)
+                    dataToSend.append('Submitter', this.state.name)
+                    dataToSend.append('Token', JSON.stringify(token))
+                    fetch('https://script.google.com/macros/s/AKfycbz9fDIv7bhBWb8nTWrkg4-cKjIQ3oG9t0BgbLGnZQOorxR52UOd/exec',
+                        {
+                            method: 'POST',
+                            body: dataToSend
+                        }
+                    ).then((res) => {
+                        if (res.ok)
+                        {
+                            res.json().then(res1 => {
+                                localStorage.setItem('idea', this.state.value)
+                                localStorage.setItem('name', this.state.name)
+                                localStorage.setItem('email', this.state.email)
+                                this.context.router.push('part2submit')
+                            })
 
-        const dataToSend = new FormData();
-        dataToSend.append('Email', this.state.email)
-        dataToSend.append('Idea', this.state.value)
-        dataToSend.append('Submitter', this.state.name)
-        dataToSend.append('Token', JSON.stringify(token))
-        fetch('https://script.google.com/macros/s/AKfycbz9fDIv7bhBWb8nTWrkg4-cKjIQ3oG9t0BgbLGnZQOorxR52UOd/exec',
-            {
-                method: 'POST',
-                body: dataToSend
+                        } else {
+                            alert('unable to send your idea, please email filmfund@gmail.com with your receipt and idea')
+                        }
+                    })
+                })
+
+            } else {
+                alert('unable to contact Stripe, please try again later')
+                res.text().then(text => {
+                    console.log(text)
+                })
             }
-        ).then((res) => {
-            if (res.ok)
-        {
-            res.json().then(res1 => {
-                localStorage.setItem('idea', this.state.value)
-                localStorage.setItem('name', this.state.name)
-                localStorage.setItem('email', this.state.email)
-                this.context.router.push('part2submit')
-            })
-
-        } else {
-                alert('unable to send your idea, please email filmfund@gmail.com with your receipt and idea')
-        }
         })
+
     }
     render() {
 
