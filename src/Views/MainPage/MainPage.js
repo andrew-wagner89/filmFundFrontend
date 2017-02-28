@@ -61,7 +61,7 @@ export class MainPage extends React.Component {
                             <h1 className="question"> Why The Film Fund?</h1><br/>
                             Starting out as an independent filmmaker, I found myself struggling to raise financing and find resources for my film projects. It appeared that those who already had industry experience or access to better resources and crew dominated most contests.<br/><br/>
                             We're providing funding up to $10,000 for a short film in a way that's a lot simpler than screenwriting contests, crowdfunding, or applying to grants, because I'm sick of seeing these funding avenues dominated by industry experts (i.e. Zach Braff raising 3+ million on Kickstarter).<br/><br/>
-                            – Thomas Verdi, Founder and CEO
+                            – Thomas Verdi, Founder and CEO and Cool Guy
                         </small></h1>
                         <br/><br/>
                         <h1 className="question">How Do I Enter?</h1>
