@@ -122,8 +122,8 @@ export class PartTwoSubmit extends React.Component {
             <Row>
             <Col>
             <PanelGroup>
-            <Panel header={<PageHeader>Thanks for entering the competition! </PageHeader>}>
-    <PageHeader><small>If you want to submit again for free share our competition over social media <br/> One share is worth one more submission</small></PageHeader>
+            <Panel header={<PageHeader>Thanks for entering. You will receive an email receipt shortly.</PageHeader>}>
+    <PageHeader><small>Get free entries to submit additional sentences at no cost by sharing The Film Fund on Facebook and Twitter below. <br/> One share earns you an additional submission credit.</small></PageHeader>
         </Panel>
         <Panel header={<p>Share our page here! </p>}>
             <FacebookShareButton
