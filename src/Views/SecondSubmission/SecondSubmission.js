@@ -145,7 +145,7 @@ export class SecondSubmission extends React.Component {
                                         panelLabel="Pay with Credit Card"
                                         amount={2500}
                                         currency="USD"
-                                        stripeKey="pk_test_o6Bwq8xknOQT69Kl7toA7v2H"
+                                        stripeKey="pk_live_XkhEgLXdc6Vruep49wl4Hw8M"
                                         email={this.state.email}
                                         billingAddress
                                         allowRememberMe={false}
