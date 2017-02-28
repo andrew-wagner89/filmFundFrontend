@@ -88,9 +88,11 @@ export class SecondSubmission extends React.Component {
                     <Row>
                             <PanelGroup>
                                 <Panel header={<PageHeader>Welcome to the Film Fund</PageHeader>}>
-                                    <PageHeader><small>Wasn't that easy? Enter your sentence below to Round 2 for a chance to get up to $10,000 in funding to make your short film idea into a real production
+                                    <PageHeader><small>Wasn't that easy? Enter your sentence below to Round 2 for a chance to get up to $10,000 in funding to make your short film idea into a real production.
                                         <br/><br/>
                                         Contest entry fee: $25
+                                        <br/><br/>
+                                        Deadline: April 27th, 2017 at 11:59 PM
                                     </small></PageHeader>
                                 </Panel>
                                 <Panel header={<p>Enter Round 2 here! </p>}>
