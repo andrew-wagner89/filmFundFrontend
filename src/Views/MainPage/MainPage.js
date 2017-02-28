@@ -65,11 +65,13 @@ export class MainPage extends React.Component {
                         </small></h1>
                         <br/><br/>
                         <h1 className="question">How Do I Enter?</h1>
-                        <h1><small>Craft and submit one sentence with a compelling premise that also conveys why you need this funding to achieve your vision. Our judges will pick the best one. To see how easy it is, the first round is free to enter. Then you and your brilliant sentence can choose to pay $25 to enter the second round for a chance to win up to $10,000. See examples here, and enter below.<br/><br/>
+                            <h1><small>Craft and submit one sentence with a compelling premise that also conveys why you need this funding to achieve your vision. Our judges will pick the best one. To see how easy it is, the first round is free to enter. Then you and your brilliant sentence can choose to pay $25 to enter the second round for a chance to win up to $10,000. See examples <a href="#examples">here</a>, and enter below.<br/><br/>
                             Sentences judged on:<br/>
                             1) Compelling Premise<br/>
-                            2) Creative Utilization of Funds</small></h1><br/>
+                            2) Creative Utilization of Funds</small></h1>
                         </Col>
+                    </Panel>
+                    <Panel className="black">
                         <FormGroup
                             controlId="formBasicText"
                             validationState={this.getValidationState()}
