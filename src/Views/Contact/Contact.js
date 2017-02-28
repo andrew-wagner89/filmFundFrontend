@@ -23,7 +23,7 @@ export class Contact extends React.Component {
                             <PanelGroup>
                                 <Panel className="black" header={<PageHeader>Contact Information</PageHeader>}>
                                     <PageHeader><small>
-                                        Hit us up at tom@thefilmfund.co with any questions whatsoever, <br/>Even if you just want to ask me what I'm having for lunch.
+                                        Hit us up at tom@thefilmfund.co with any questions whatsoever, even if you just want to know what's for lunch.
                                     </small></PageHeader>
                                 </Panel>
                             </PanelGroup>
