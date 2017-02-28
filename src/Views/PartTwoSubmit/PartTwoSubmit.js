@@ -102,7 +102,7 @@ export class PartTwoSubmit extends React.Component {
         })
 
         } else {
-            alert('unable to send your idea, please email filmfund@gmail.com with your receipt and idea')
+            alert('unable to send your idea, please email tom@thefilmfund.co with your receipt and idea')
         }
     })
     }
