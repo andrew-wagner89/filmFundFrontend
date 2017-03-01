@@ -23,6 +23,7 @@ export class FAQ extends React.Component {
                             <PanelGroup>
                                 <Panel header={<PageHeader>Frequently Asked Questions</PageHeader>}>
                                     <ListGroup className="lg-left black" >
+                                        <ListGroupItem header="Why are there two rounds?">The  first round exists to show how easy it is to enter compared to other contests and grants. If you want a shot at the funding, you can choose to enter Round 2 for $25.</ListGroupItem>
                                         <ListGroupItem header="Do I keep the rights to the my short film if I win?">Yes, you retain all rights.</ListGroupItem>
                                         <ListGroupItem header="How do I receive the funding?">To maintain accountability, The Film Fund will reimburse individual expenses for your film after receiving expense reports, receipts, invoices, etc.</ListGroupItem>
                                         <ListGroupItem header="Where does the money come from?">Filmmakers like you who have also submitted their sentence to The Film Fund.</ListGroupItem>
