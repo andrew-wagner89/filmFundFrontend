@@ -128,7 +128,7 @@ export class PartTwoSubmit extends React.Component {
         <Panel header={<p>Share our page here! </p>}>
             <FacebookShareButton
                 url={"http://thefilmfund.co/"}
-                title={"The Film Fund"}
+                title={"Get up to $10,000 to make your short film by writing one sentence with The Film Fund"}
                 className="centered-share"
                 beforeOnClick={this.facebookShared.bind(this)}>
                 <FacebookIcon
@@ -137,7 +137,7 @@ export class PartTwoSubmit extends React.Component {
             </FacebookShareButton>
             <TwitterShareButton
                 url={"http://thefilmfund.co/"}
-                title={"The Film Fund"}
+                title={"Get up to $10,000 to make your short film by writing one sentence with The Film Fund"}
                 className="centered-share"
                 beforeOnClick={this.twitterShared.bind(this)}>
                 <TwitterIcon
