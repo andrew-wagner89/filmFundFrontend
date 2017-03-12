@@ -25,7 +25,8 @@ export class FAQ extends React.Component {
                                     <ListGroup className="lg-left black" >
                                         <ListGroupItem header="Why are there two rounds?">The  first round exists to show how easy it is to enter compared to other contests and grants. If you want a shot at the funding, you can choose to enter Round 2 for $25.</ListGroupItem>
                                         <ListGroupItem header="Do I keep the rights to the my short film if I win?">Yes, you retain all rights.</ListGroupItem>
-                                        <ListGroupItem header="Can I enter a sentence idea for my film that's already in production but needs post work?">Yes. We want to make films happen any way possible.</ListGroupItem>
+                                        <ListGroupItem header="Can I enter a sentence idea for my film that's already in production but needs post work?">Yes. We want to make films happen.</ListGroupItem>
+                                        <ListGroupItem header="Can I enter a sentence idea for a web series?">Yes. A short film could serve as the pilot episode, right?</ListGroupItem>
                                         <ListGroupItem header="How do I receive the funding?">To maintain accountability, The Film Fund will reimburse individual expenses for your film after receiving expense reports, receipts, invoices, etc.</ListGroupItem>
                                         <ListGroupItem header="Where does the money come from?">Filmmakers like you who have also submitted their sentence to The Film Fund.</ListGroupItem>
                                         <ListGroupItem header="Why are you doing this?">We want to see films get financed in a new way because we know it's possible to get around industry gatekeepers.</ListGroupItem>
