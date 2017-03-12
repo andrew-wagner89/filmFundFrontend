@@ -36,7 +36,7 @@ export class Judges extends React.Component {
                                                 <Panel className="grnborder">
                                                     <img src={dawn} alt="" className="judge-img"></img>
                                                     <h3>Dawn Keetley</h3>
-                                                    <p>Dawn Keetley is Professor of English at Lehigh University where she teaches horror /gothic literature, film, and television. She has most recently published in the Journal of the Fantastic in the Arts, the Journal of Popular Television, the Journal of Film and Video, and Gothic Studies. She has edited a collection of essays on The Walking Dead and co-edited another on plant horror in fiction and film. She writes regularly for a horror website she co-founded at <a href="HorrorHomeroom">HorrorHomeroom.com</a>.</p>
+                                                    <p>Dawn Keetley is Professor of English at Lehigh University where she teaches horror /gothic literature, film, and television. She has most recently published in the Journal of the Fantastic in the Arts, the Journal of Popular Television, the Journal of Film and Video, and Gothic Studies. She has edited a collection of essays on The Walking Dead and co-edited another on plant horror in fiction and film. She writes regularly for a horror website she co-founded at <a href="http://www.horrorhomeroom.com">Horror Homeroom</a></p>
                                                 </Panel>
                                             </Col>
                                             <Clearfix visibleSmBlock visibleMdBlock></Clearfix>
