@@ -178,7 +178,7 @@ export class SecondSubmission extends React.Component {
                                         </Button>
                                         </StripeCheckout><br/>
 
-                                        <p>By entering the contest, you agree to the Terms and Conditions.</p>
+                                        <p>By entering the contest, you agree to the Official Rules and Terms of Service.</p>
 
                     <img src={stripeLogo}/>
 
