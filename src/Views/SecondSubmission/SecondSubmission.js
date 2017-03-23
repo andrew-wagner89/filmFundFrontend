@@ -177,6 +177,9 @@ export class SecondSubmission extends React.Component {
                                             Pay with Credit Card
                                         </Button>
                                         </StripeCheckout><br/>
+
+                                        <p>By entering the contest, you agree to the Terms and Conditions.</p>
+
                     <img src={stripeLogo}/>
 
                                     <p>{this.state.errorMessage}</p>
