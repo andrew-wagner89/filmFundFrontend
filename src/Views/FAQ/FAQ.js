@@ -34,7 +34,7 @@ export class FAQ extends React.Component {
                                         <ListGroupItem header="Who are the judges?">Check them out <a href="#team">here</a> </ListGroupItem>
                                         <ListGroupItem header="Can I submit the finished film to film festivals?">Of course.</ListGroupItem>
                                         <ListGroupItem header="I have no idea what I'm doing. Will you help me with budgeting?">Budgets will be different for each film, but we'd be more than happy to share some sample short film budgets with you upon request. They're pretty easy to put together.</ListGroupItem>
-                                        <ListGroupItem header="Do I need to give credit to The Film Fund?">Yes, and we'll be honored. Include visible text in your film for at least 5 seconds (either in opening or end credits) that reads "Made Possible by The Film Fund."</ListGroupItem>
+                                        <ListGroupItem header="Do I need to give credit to The Film Fund?">Yes, and we'll be honored. Include visible text in your film for at least 5 seconds (either in opening or end credits) that reads "Made Possible by The Film Fund. Learn more at thefilmfund.co"</ListGroupItem>
                                     </ListGroup>
                                     <p>Question not answered here? Please contact us!</p>
                                 </Panel>
