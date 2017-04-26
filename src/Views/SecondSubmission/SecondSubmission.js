@@ -2,8 +2,7 @@
  * Created by andrew on 2/5/17.
  */
 import React, { PropTypes as T } from 'react'
-import {PageHeader, Panel, PanelGroup, Col, Row, Grid, FormGroup, HelpBlock,FormControl, Button} from 'react-bootstrap'
-import logo from '../../Images/facebook_logo.png'
+import {PageHeader, Panel, PanelGroup, Row, Grid, Button} from 'react-bootstrap'
 import './SecondSubmission.css'
 
 export class SecondSubmission extends React.Component {
@@ -26,7 +25,7 @@ export class SecondSubmission extends React.Component {
         }
     }
     returnToMain(){
-        localStorage.setItem('returnedFromSubmit', 'true')
+        sessionStorage.setItem('returnedFromSubmit', 'true')
         this.context.router.push('/home')
     }
 

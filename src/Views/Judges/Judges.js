@@ -29,14 +29,14 @@ export class Judges extends React.Component {
                                                 <Panel className="grnborder">
                                                     <img src={avi} alt="" className="judge-img"></img>
                                                     <h3>Avi Setton</h3>
-                                                    <p>Avi Setton received a B.F.A. in Film & Television Production at New York University’s Tisch School of the Arts with a minor in Philosophy, and an M.A. in English at Lehigh University. Avi's experience is wide-ranging: he taught documentary filmmaking to graduate students at Lehigh, taught screenwriting at SOCAPA, worked as a story logger on a reality TV show, worked as an editor, script supervisor, and assistant cameraman on films, TV shows, and commercials, among other freelance industry jobs. Avi currently works in Mixed Reality and Virtual Reality.</p>
+                                                    <p>Avi Setton received a B.F.A. in Film & Television Production at New York University’s Tisch School of the Arts with a minor in Philosophy, and an M.A. in English at Lehigh University. Avi's experience is wide-ranging: he currently works as a videographer and editor working in VR at Google, taught documentary filmmaking to graduate students at Lehigh, taught screenwriting at SOCAPA, worked as a story logger on a reality TV show, worked as an editor, script supervisor, and assistant cameraman on films, TV shows, and commercials, among other freelance industry jobs.</p>
                                                 </Panel>
                                             </Col>
                                             <Col xs={12} sm={6} lg={3}>
                                                 <Panel className="grnborder">
                                                     <img src={dawn} alt="" className="judge-img"></img>
                                                     <h3>Dawn Keetley</h3>
-                                                    <p>Dawn Keetley is Professor of English at Lehigh University where she teaches horror /gothic literature, film, and television. She has most recently published in the Journal of the Fantastic in the Arts, the Journal of Popular Television, the Journal of Film and Video, and Gothic Studies. She has edited a collection of essays on The Walking Dead and co-edited another on plant horror in fiction and film. She writes regularly for a horror website she co-founded at <a href="www.HorrorHomeroom.com">www.HorrorHomeroom.com</a>.</p>
+                                                    <p>Dawn Keetley is Professor of English at Lehigh University where she teaches horror /gothic literature, film, and television. She has most recently published in the Journal of the Fantastic in the Arts, the Journal of Popular Television, the Journal of Film and Video, and Gothic Studies. She has edited a collection of essays on The Walking Dead and co-edited another on plant horror in fiction and film. She writes regularly for a horror website she co-founded at <a href="http://www.horrorhomeroom.com">Horror Homeroom.</a></p>
                                                 </Panel>
                                             </Col>
                                             <Clearfix visibleSmBlock visibleMdBlock></Clearfix>

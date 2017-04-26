@@ -18,7 +18,7 @@ export class MainPage extends React.Component {
         this.state = {
             value: "",
             errorMessage: "",
-            returnedFromSubmit: localStorage.getItem('returnedFromSubmit')
+            returnedFromSubmit: sessionStorage.getItem('returnedFromSubmit')
         }
 
         localStorage.setItem('idea', "")
