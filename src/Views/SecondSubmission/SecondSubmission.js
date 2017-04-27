@@ -110,7 +110,7 @@ export class SecondSubmission extends React.Component {
                                         <br/><br/>
                                         Contest entry fee: $25
                                         <br/><br/>
-                                        Deadline: April 27th, 2017 at 11:59 PM
+                                        Deadline: April 30th, 2017 by 11:00 PM
                                     </small></PageHeader>
                                 </Panel>
                                 <Panel header={<p>Enter Round 2 here! </p>}>
