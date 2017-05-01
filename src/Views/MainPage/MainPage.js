@@ -17,12 +17,15 @@ export class MainPage extends React.Component {
 
         this.state = {
             value: "",
-            errorMessage: ""
+            errorMessage: "",
+            returnedFromSubmit: sessionStorage.getItem('returnedFromSubmit')
         }
 
         localStorage.setItem('idea', "")
         localStorage.setItem('name', "")
         localStorage.setItem('email', "")
+
+
     }
     handleChange(e) {
         this.setState({ value: e.target.value })
@@ -71,26 +74,29 @@ export class MainPage extends React.Component {
                             2) Creative Utilization of Funds</small></h1>
                         </Col>
                     </Panel>
-                    <Panel className="black">
-                        <FormGroup
-                            controlId="formBasicText"
-                            validationState={this.getValidationState()}
-                        >
-                            <FormControl
-                                type="textarea"
-                                value={this.state.value}
-                                placeholder="Enter your idea here"
-                                onChange={this.handleChange.bind(this)}
-                            />
-                            <FormControl.Feedback />
-                            <HelpBlock>{'Current Entry length: ' + this.state.value.length + ' characters. Max allowed length: 200'}</HelpBlock>
-                        </FormGroup>
-                        <Button bsStyle="primary" onClick={this.submitIdea.bind(this)}>
-                            Submit your idea
-                        </Button>
-                        <p>{this.state.errorMessage}</p>
+                    {
+                        !this.state.returnedFromSubmit ?
+                            (<Panel className="black">
+                                <FormGroup
+                                    controlId="formBasicText"
+                                    validationState={this.getValidationState()}
+                                >
+                                    <FormControl
+                                        type="textarea"
+                                        value={this.state.value}
+                                        placeholder="Enter your idea here"
+                                        onChange={this.handleChange.bind(this)}
+                                    />
+                                    <FormControl.Feedback />
+                                    <HelpBlock>{'Current Entry length: ' + this.state.value.length + ' characters. Max allowed length: 200'}</HelpBlock>
+                                </FormGroup>
+                                <Button bsStyle="primary" onClick={this.submitIdea.bind(this)}>
+                                    Submit your idea
+                                </Button>
+                                <p>{this.state.errorMessage}</p>
 
-                    </Panel>
+                            </Panel>)
+                        : null}
 
                 </PanelGroup>
                     </Row>

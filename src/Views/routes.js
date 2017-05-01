@@ -13,7 +13,6 @@ import Contact from './Contact/Contact'
 import NotFound from './NotFound/NotFound'
 import Rules from './Rules/Rules'
 import Judges from './Judges/Judges'
-import PartTwoSubmit from './PartTwoSubmit/PartTwoSubmit'
 import Giveaway from './Giveaway/Giveaway'
 export const makeRoutes = () => {
     return (
@@ -27,7 +26,6 @@ export const makeRoutes = () => {
             <Route path="contact" component={Contact} />
             <Route path="rulesterms" component={Rules} />
             <Route path="team" component={Judges} />
-            <Route path='part2submit' component={PartTwoSubmit} />
             <Route path='giveaway' component={Giveaway} />
             <Route path="*" component={NotFound} />
         </Route>
