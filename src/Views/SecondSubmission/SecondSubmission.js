@@ -38,7 +38,7 @@ export class SecondSubmission extends React.Component {
                             <PanelGroup>
                                 <Panel header={<PageHeader>Welcome to the Film Fund</PageHeader>}>
                                     <PageHeader><small>
-                                        Thanks for entering round 1! Sadly round 2 has closed for judging. Stay tuned to your email for future updates and competitions!
+                                        The Spring 2017 entries have closed. Stay tuned to your email for updates.
                                         <br/><br/>
 
                                     </small></PageHeader>
