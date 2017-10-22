@@ -74,7 +74,7 @@ export class MainPage extends React.Component {
                             2) Creative Utilization of Funds</small></h1>
                         </Col>
                     </Panel>
-                  /  {
+                   {
                         !this.state.returnedFromSubmit ?
                             (<Panel className="black">
                                 <FormGroup
