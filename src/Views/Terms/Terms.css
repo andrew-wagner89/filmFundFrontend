@@ -1,0 +1,11 @@
+ul, ol {
+	text-align: left;
+}
+
+ol {
+	font-weight: bold;
+}
+
+ul {
+	font-weight: normal;
+}

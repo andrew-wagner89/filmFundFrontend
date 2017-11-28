@@ -28,7 +28,6 @@ export class Container extends React.Component {
             children = React.cloneElement(this.props.children, {
             })
         }
-
         return (
                 <div className="maincontain">
                 <Navbar fluid className="black">
@@ -44,13 +43,14 @@ export class Container extends React.Component {
                     <Navbar.Collapse>
                         <Nav pullRight>
                             <NavItem eventKey={8} href="#home">Home</NavItem>
-                            <NavItem eventKey={1} href="#about">About</NavItem>
-                            <NavItem eventKey={2} href="#examples">Examples</NavItem>
-                            <NavItem eventKey={3} href="#faq">FAQ</NavItem>
-                            <NavItem eventKey={4} href="#contact">Contact Us</NavItem>
-                            <NavItem eventKey={5} href="#team">Judges</NavItem>
-                            <NavItem eventKey={6} href="#rulesterms">Official Rules and Terms</NavItem>
-                            <NavItem eventKey={7} href="#giveaway">Giveaway</NavItem>
+                            <NavItem eventKey={1} href="#submission">Submit</NavItem> 
+                            <NavItem eventKey={2} href="#about">About</NavItem>
+                            <NavItem eventKey={3} href="#pastwinners">Past Winners</NavItem>
+                            <NavItem eventKey={4} href="#examples">Examples</NavItem>
+                            <NavItem eventKey={5} href="#faq">FAQ</NavItem>
+                            <NavItem eventKey={6} href="#contact">Contact Us</NavItem>
+                            <NavItem eventKey={7} href="#team">Judges</NavItem>
+                            <NavItem eventKey={8} href="#terms">Official Rules and Terms</NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

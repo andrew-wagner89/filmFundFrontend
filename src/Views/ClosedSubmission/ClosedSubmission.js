@@ -3,26 +3,15 @@
  */
 import React, { PropTypes as T } from 'react'
 import {PageHeader, Panel, PanelGroup, Row, Grid, Button} from 'react-bootstrap'
-import './SecondSubmission.css'
+import './ClosedSubmission.css'
 
-export class SecondSubmission extends React.Component {
+export class ClosedSubmission extends React.Component {
     static contextTypes = {
         router: T.object,
     }
 
     constructor(props, context) {
         super(props, context)
-
-        this.state = {
-            value: localStorage.getItem('idea'),
-            name: '',
-            email: '',
-            errorMessage: ""
-        }
-
-        if(!this.state.value){
-            this.context.router.push('/home')
-        }
     }
     returnToMain(){
         sessionStorage.setItem('returnedFromSubmit', 'true')
@@ -53,4 +42,4 @@ export class SecondSubmission extends React.Component {
         )
     }
 }
-export default SecondSubmission
+export default ClosedSubmission
