@@ -27,7 +27,7 @@ export class ClosedSubmission extends React.Component {
                             <PanelGroup>
                                 <Panel header={<PageHeader>Welcome to the Film Fund</PageHeader>}>
                                     <PageHeader><small>
-                                        The Spring 2017 entries have closed. Stay tuned to your email for updates.
+                                        The Spring 2017 entries have closed. The Film Fund will open for entries again on December 4th, 2017. Stay tuned to your email for updates.
                                         <br/><br/>
 
                                     </small></PageHeader>
