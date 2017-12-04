@@ -21,7 +21,7 @@ export const makeRoutes = () => {
             <IndexRedirect to="/home" />
             <Route path="home" component={MainPage} />
             <Route path="about" component={About} />
-            <Route path="submission" component={ClosedSubmission} /> //Change this to ClosedSubmission to close it
+            <Route path="submission" component={OpenSubmission} /> //Change this to ClosedSubmission to close it
             <Route path="examples" component={Examples} />
             <Route path="faq" component={FAQ} />
             <Route path="contact" component={Contact} />
