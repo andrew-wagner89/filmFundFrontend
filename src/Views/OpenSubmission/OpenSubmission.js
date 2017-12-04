@@ -105,7 +105,7 @@ export class OpenSubmission extends React.Component {
                                 <Panel className="black" header={<PageHeader>Get up to $10,000 to make your short film by writing one sentence.</PageHeader>}>
                                     <Col xs={12} md={10} mdOffset={1}>
                                     <h1 className="question">How Do I Enter?</h1>
-                                        <h1><small>Craft and submit one sentence with a compelling premise that also conveys why you need this funding to achieve your vision. Our judges will pick the best one. To see how easy it is, the first round is free to enter. Then you and your brilliant sentence can choose to pay $25 to enter the second round for a chance to win up to $10,000. See examples <a href="#examples">here</a>, and enter below.<br/><br/>
+                                        <h1><small>Craft and submit one sentence with a compelling premise that also conveys why you need this funding to achieve your vision. Our judges will pick the best one. See examples <a href="#examples">here</a>, and enter below.<br/><br/>
                                         Sentences judged on:<br/>
                                         1) Compelling Premise<br/>
                                         2) Creative Utilization of Funds</small></h1>
