@@ -109,6 +109,7 @@ export class OpenSubmission extends React.Component {
                                         Sentences judged on:<br/>
                                         1) Compelling Premise<br/>
                                         2) Creative Utilization of Funds</small></h1>
+										<h1><small>Deadline: February 26th, 11:59 PM</small></h1>
                                     </Col>
                                 </Panel>
                                 <Panel>
