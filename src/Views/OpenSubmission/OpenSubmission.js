@@ -77,7 +77,7 @@ export class OpenSubmission extends React.Component {
                                 localStorage.setItem('idea', this.state.value)
                                 localStorage.setItem('name', this.state.name)
                                 localStorage.setItem('email', this.state.email)
-                                this.context.router.push('part2submit')
+                                this.context.router.push('completesubmission')
                             })
 
                         } else {

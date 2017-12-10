@@ -15,6 +15,7 @@ import NotFound from './NotFound/NotFound'
 import Terms from './Terms/Terms'
 import Judges from './Judges/Judges'
 import PastWinners from './PastWinners/PastWinners'
+import CompleteSubmission from './CompleteSubmission/CompleteSubmission'
 export const makeRoutes = () => {
     return (
         <Route path="/" component={Container}>
@@ -28,6 +29,7 @@ export const makeRoutes = () => {
             <Route path="terms" component={Terms} />
             <Route path="team" component={Judges} />
             <Route path='pastwinners' component={PastWinners} />
+            <Route path='completesubmission' component={CompleteSubmission} />
             <Route path="*" component={NotFound} />
         </Route>
     )
