@@ -50,7 +50,7 @@ export class Terms extends React.Component {
                                         <li>Rules
                                             <ul>
                                                 <li>Submissions are accepted via electronic submission to the official Contest website (thefilmfund.co) during the Contest period.</li>
-                                                <li>Submissions will be separated into two individual rounds.  Round 1 submissions require no entry fee, but will not be eligible to receive any cash prize. Round 2 submissions require an entry fee of $25 per submission and will be eligible to win a cash prize.</li>
+                                                <li>All submissions require an entry fee of $25 per submission and will be eligible to win a cash prize.</li>
                                                 <li>There is no limit to the number of projects an entrant may submit. </li>
                                                 <li>Submission fee payment must be made in full at time of submission for entries to be considered eligible.  All entry fees are non-refundable. </li>
                                                 <li>All submitted material must be original, and all rights must be wholly owned by the writer(s).</li>
@@ -68,7 +68,7 @@ export class Terms extends React.Component {
                                         </li>
                                         <li>Contest Period
                                             <ul>
-                                                <li>The Contest begins on [TBD] at 8:00.00 AM Eastern Time and ends on [TBD] at 10:59.59 PM Eastern Time (referred to as the Contest Period). Entries submitted before or after the Contest Period will be disqualified.
+                                                <li>The Contest begins on December 4th, 2017 at 8:00.00 AM Eastern Time and ends on February 26th at 10:59.59 PM Eastern Time (referred to as the Contest Period). Entries submitted before or after the Contest Period will be disqualified.
                                                 </li>
                                             </ul>
                                         </li>
