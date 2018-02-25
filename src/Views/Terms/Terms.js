@@ -76,7 +76,7 @@ export class Terms extends React.Component {
                                             <ul>
                                                 <li>Winner(s) will be chosen by the judging panel, selected by The Film Fund LLC or its representatives.  The winner(s) will be chosen based on the following two factors:  (1) compelling premise and (2) creative utilization of funds.  Entrants may be required to submit further information to assist in the judges’ verification of eligibility.  Any entrant may be deemed ineligible at the sole discretion of The Film Fund LLC. The outcome of judging is at the sole discretion of the judges. 
                                                 </li>
-                                                <li>The winning prize will be dependent on the number of entrants in the Contest, but will not exceed $10,000.  //Entrants will be notified via the official Contest website about the size of the prize prior to the end date of the Contest. 
+                                                <li>The winning prize will be dependent on the number of entrants in the Contest, but will not exceed $10,000.  /*Entrants will be notified via the official Contest website about the size of the prize prior to the end date of the Contest. */
                                                 </li>
                                                 <li>Winner(s) will be notified by email within 28 days after the Contest Period.  If the winner(s) cannot be contacted or do not claim the prize within 14 days of notification, the Organizer reserves the right to withdraw the prize from the winner(s) and pick a replacement winner.
                                                 </li>
