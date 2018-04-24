@@ -22,7 +22,7 @@ export class PastWinners extends React.Component {
                             <PanelGroup>
                                 <Panel className="black" header={<PageHeader>Past Winners</PageHeader>}>
                                     <Image className="film" alt="test" src={Americano}/>
-                                    <p> Above still from "AMERICANO" directed by Tim Viola, the Spring 2017 winner of The Film Fund.</p>
+                                    <p> Above still from "AMERICANO" directed by Tim Viola, the Spring 2017 winner of The Film Fund. Watch the trailer <a href = "https://vimeo.com/246031928" target="_blank">here</a>.</p>
                                 </Panel>
                             </PanelGroup>
                         </Col>
