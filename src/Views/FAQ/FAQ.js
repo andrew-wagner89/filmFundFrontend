@@ -23,7 +23,7 @@ export class FAQ extends React.Component {
                             <PanelGroup>
                                 <Panel header={<PageHeader>Frequently Asked Questions</PageHeader>}>
                                     <ListGroup className="lg-left black" >
-                                        <ListGroupItem header="Do I keep the rights to the my short film if I win?">Yes, you retain all rights.</ListGroupItem>
+                                        <ListGroupItem header="Do I keep the rights to my short film if I win?">Yes, you retain all rights.</ListGroupItem>
                                         <ListGroupItem header="Can I enter a sentence idea for my film that's already in production but needs post work?">Yes. We want to make films happen.</ListGroupItem>
                                         <ListGroupItem header="Can I enter a sentence idea for a web series?">Yes. A short film could serve as the pilot episode, right?</ListGroupItem>
                                         <ListGroupItem header="How do I receive the funding?">To maintain accountability, The Film Fund will reimburse individual expenses for your film after receiving expense reports, receipts, invoices, etc.</ListGroupItem>
